@@ -30,7 +30,7 @@ export function PostDetail({ post }) {
   const {data,isLoading} = useQuery(['detail', post.id],()=>fetchComments(post.id),{
     staleTime:1000*5
   })
-  const updateMutationPost = useMutation((text)=>updatePost(text))
+
   if(isLoading) return <div>isLoading...</div>
   
   
